@@ -693,11 +693,15 @@ input[type=checkbox] {
     }
 
     .package h1 {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .welcome {
         padding: 3px;
+    }
+    .welcome h1{
+        /* padding: 3px; */
+        font-size: 25px;
     }
 
     .welcome p {
@@ -706,6 +710,7 @@ input[type=checkbox] {
         justify-content: center;
         text-align: center;
         padding: 0px 20px;
+        font-size: 15px;
 
     }
 
@@ -716,18 +721,36 @@ input[type=checkbox] {
         grid-gap: 0.4rem;
         margin: 15px;
     }
-
+    .jammu-kashmir p{
+        font-size: 15px;
+    }
+    .jammu-kashmir h1{
+        font-size: 25px;
+    }
+    
     .jk-package:first-child {
         grid-column-start: 1;
         grid-column-end: 1;
     }
-
+    
     /* Leh Ladakh packages */
-
+    
     .leh-ladakh {
         display: grid;
         grid-template-columns: 1fr;
         margin: 15px;
+    }
+    .leh-ladakh h1{
+        font-size: 25px;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+        /* margin: 15px; */
+    }
+    .leh-ladakh p{
+        font-size: 15px;
+        /* display: grid; */
+        /* grid-template-columns: 1fr; */
+        /* margin: 15px; */
     }
 
     .ll-package:first-child {
@@ -822,7 +845,6 @@ input[type=checkbox] {
     }
 }
 
-
 /* FOOTER */
 footer {
     margin-bottom: 0px;
@@ -906,9 +928,22 @@ footer {
         font-size: 14px;
 
     }
+    .footer-main p{
+        font-size: 13px;
+    }
+    .footer-right a{
+        font-size: 13px;
+
+    }
 
     .footer-bottom {
         font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .footer-bottom p{
+        font-size: 15px;
         display: flex;
         flex-direction: column;
         height: auto;
@@ -935,6 +970,7 @@ footer {
         color: rgb(255, 213, 23);
         text-align: center;
         padding: 10px;
+        font-size: 12px;
     }
 
 }
