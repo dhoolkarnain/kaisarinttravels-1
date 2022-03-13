@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    width: 30%;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+/* NAVBAR STYLING STARTS */
+.navbar {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    z-index: 101;
+}
+
+.nav-contact {
+    padding-left: 10px;
+    width: auto;
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: right;
+    /* border: 2px solid red; */
+}
+
+.nav-contact i {
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* padding-left: 13px; */
+    animation-name: contact2;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+
+.nav-contact a {
+    font-size: 14px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 3px;
+    /* background-color: red; */
+}
+
+@keyframes contact2 {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav-center {
+    display: flex;
+    /* display: none; */
+    height: 20px;
+    width: 100%;
+}
+
+#nav-center-right {
+    display: flex;
+    justify-content: right;
+}
+
+.nav-contact i {
+    color: rgb(255, 213, 23);
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+
+.logo {
+    /* font-size: 402px; */
+    width: 70px;
+    border: 2px solid white;
+    border-radius: 34px;
+}
+
+/* NAVBAR MENU */
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: rgb(255, 213, 23);
+}
+
+.menu li a:hover {
+    color: black;
+
+}
+
+.menu li {
+    padding: 9px 14px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 6px;
+    border-radius: 5px;
+    margin: auto;
+    /* width: 30px; */
+}
+
+.booknow {
+    background-color: rgb(255, 213, 23);
+    /* width: 50%; */
+}
+
+.booknow a {
+    color: black;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+
+@media (max-width: 800px) {
+    .navbar {
+        position: sticky;
+        display: flex;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .menu {
+        margin-top: -102px;
+        display: none;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 85%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li+li {
+        margin-top: 30px;
+
+    }
+
+    .menu li a {
+        color: black;
+        font-size: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+        height: 100vh;
+
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* LANDING PAGE SLIDER */
+
+
+.slideshow-container {
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0px;
+}
+
+.invisible {
+    height: 90vh;
+}
+
+.slideshow-container img {
+    width: 200px;
+    /* height: 700px; */
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    padding: 10px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 18px 88px;
+    position: absolute;
+    bottom: 313px;
+    width: 100%;
+    text-align: center;
+}
+
+.text a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 213, 23);
+    padding: 6px;
+    border-radius: 6px;
+    position: relative;
+    bottom: 15px;
+    font-size: 25px;
+}
+
+.text h1 {
+    font-size: 58px;
+    margin-bottom: 5px;
+}
+
+.text p {
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media (max-width: 1160px) {
+
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 25px;
+        padding: 18px 8px;
+        position: absolute;
+        bottom: 313px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text a {
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+        background-color: rgb(255, 213, 23);
+        padding: 6px;
+        border-radius: 6px;
+        position: relative;
+        bottom: 15px;
+        font-size: 25px;
+    }
+
+    .text h1 {
+        font-size: 35px;
+        margin-bottom: 5px;
+    }
+
+    .text p {
+        font-size: 15px;
+        width: 60%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 840px) {
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        padding: 18px 8px;
+        position: absolute;
+        bottom: 250px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text a {
+        text-decoration: none;
+        color: black;
+        background-color: rgb(255, 213, 23);
+        padding: 6px;
+        border-radius: 6px;
+        position: relative;
+        bottom: 10px;
+        font-size: 19px;
+    }
+
+    .text h1 {
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+
+    .text p {
+        font-size: 10px;
+        width: 60%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 486px) {
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        padding: 18px 8px;
+        position: absolute;
+        bottom: 250px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .text a {
+        text-decoration: none;
+        color: black;
+        background-color: rgb(255, 213, 23);
+        padding: 6px;
+        border-radius: 6px;
+        position: relative;
+        bottom: 10px;
+        font-size: 12px;
+    }
+
+    .text h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .text p {
+        font-size: 8px;
+        width: 60%;
+        margin: auto;
+    }
+
+}
+
+/* PACKAGE SECTION */
+
+.package {
+    padding: 23px;
+}
+
+.package h1 {
+    padding: 18px;
+    font-size: 30px;
+}
+
+/* Package welcome */
+.welcome {
+    padding: 23px;
+}
+
+.welcome h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 103px;
+
+}
+
+/* jammu kashmir packages */
+.jammu-kashmir {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.4rem;
+    margin: 60px;
+}
+
+.jk-package {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(182, 181, 181);
+    /* margin-bottom: 23px; */
+}
+
+.jk-package a {
+    color: black;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.image-title {
+    display: flex;
+    /* width: auto; */
+    width: 100%;
+    /* border: 2px solid black; */
+}
+
+.image-title p {
+
+    /* border: 2px solid black; */
+    font-size: 15px;
+    display: flex;
+    /* width: auto; */
+    width: 100%;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* padding-top: 10px; */
+    padding-bottom: 20px;
+
+}
+
+.image-title p:last-child {
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+
+}
+
+.jk-package img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.jk-package:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: none;
+}
+
+.button {
+    padding-bottom: 23px;
+}
+
+.button a {
+    color: black;
+    width: 195px;
+    font-size: 14px;
+    background-color: rgb(255, 213, 23);
+    ;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+/* Leh Ladakh packages */
+
+.leh-ladakh {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 60px;
+    grid-gap: 0.4rem;
+}
+
+.ll-package a {
+    color: black;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ll-package img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ll-package {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(182, 181, 181)
+}
+
+.ll-package:first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: none;
+}
+
+.caption {
+    position: relative;
+    bottom: 12px;
+}
+
+@media (max-width: 1000px) {
+    .package {
+        padding: 0px;
+    }
+
+    .package h1 {
+        font-size: 25px;
+    }
+
+    .welcome {
+        padding: 13px;
+    }
+
+    .welcome p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 40px;
+
+    }
+
+    /* jammu kashmir packages */
+    .jammu-kashmir {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+    }
+
+    .jk-package img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .jk-package:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* Leh Ladakh packages */
+
+    .leh-ladakh {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+    }
+
+    .ll-package:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 770px) {
+    .package {
+        padding: 0px;
+    }
+
+    .package h1 {
+        font-size: 18px;
+    }
+
+    .welcome {
+        padding: 3px;
+    }
+
+    .welcome p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0px 20px;
+
+    }
+
+    /* jammu kashmir packages */
+    .jammu-kashmir {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0.4rem;
+        margin: 15px;
+    }
+
+    .jk-package:first-child {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    /* Leh Ladakh packages */
+
+    .leh-ladakh {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px;
+    }
+
+    .ll-package:first-child {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+}
+
+.fun-activities {
+    /* background-color: black; */
+    /* border: 2px solid red; */
+    padding: 0px 23px;
+    display: flex;
+    flex-direction: column;
+    /* height: 120px; */
+    /* background-image: url('/media/images/bg.jpg'); */
+}
+
+.fun-activities h1 {
+    /* background-color: black; */
+    /* border: 2px solid red; */
+    /* margin: 23px; */
+    display: flex;
+    color: rgb(0, 0, 0);
+    flex-direction: column;
+    align-items: center;
+}
+
+.activities {
+    /* background-color: black; */
+    height: 100px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities i {
+    /* color: rgb(255, 213, 23); */
+    color: black;
+    /* border: 2px solid red; */
+    padding-right: 25px;
+    padding-left: 25px;
+    /* width: 100%; */
+    cursor: pointer;
+    font-size: 30px;
+
+}
+
+/* FOOTER */
+footer {
+    margin-bottom: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.footer-main {
+    padding-top: 60px;
+    display: flex;
+    margin: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    width: 100%;
+    text-align: center;
+    padding-top: 44px;
+}
+
+.footer-right div {
+    padding-top: 20px;
+}
+
+.footer-center a {
+    font-size: 13px;
+}
+
+.footer-center a:hover {
+    text-decoration: underline;
+    color: rgb(255, 213, 23);
+}
+
+
+.footer-bottom {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.footer-copyright {
+    width: 100%;
+    text-align: right;
+}
+
+.footer-icons {
+    width: 100%;
+}
+
+.footer-icons a {
+    width: 100%;
+    color: rgb(255, 213, 23);
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.footer-company-about {
+    padding: 0px 50px;
+}
+
+@media (max-width: 840px) {
+    footer {
+        font-size: 14px;
+    }
+
+    .footer-main {
+        display: flex;
+        margin: 20px;
+        flex-direction: column;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        font-size: 14px;
+
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer-copyright {
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer-icons {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-icons a {
+        width: 10%;
+        color: rgb(255, 213, 23);
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
+.whatsapp {
+    /* border: 2px solid red; */
+    position: fixed;
+    bottom: 200px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    opacity: 9999;
+    /* border: 2px solid black; */
+}
+
+.whatsapp a {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    width: 50px;
+    height: 50px;
+    /* font-size: 50px; */
+    color: green;
+    background-color: white;
+    border-radius: 34px;
+    opacity: 9999;
+
+}
+.whatsapp a img{
+    height: 60px;
+    width: 60px;
+}
+
+
+
